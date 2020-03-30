@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="HeicToJpegUwp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HeicToJpegUwp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"></ColumnDefinition>
+            <ColumnDefinition Width="50*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"></RowDefinition>
+                <RowDefinition Height="0.5*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" x:Name="textBlock" HorizontalAlignment="Center" Text="Convert HEIC to JPEG" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Margin="0,20,0,0" />
+            <TextBlock Grid.Row="1" x:Name="textBlock1" HorizontalAlignment="Center" Text="Click the button below to select a folder&#x0a; and start the conversion process." TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" TextAlignment="Center"/>
+            <Button Grid.Row="2" x:Name="button" Content="Select Folder to Convert" VerticalAlignment="Top" HorizontalAlignment="Center" Height="60" Width="225" Click="button_Click"/>
+        </Grid>
+        <TextBox x:Name="textBox" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Text="Messages about the conversion process will appear here." TextWrapping="Wrap" VerticalAlignment="Stretch" IsEnabled="False" Margin="0,20,0,20"/>
+    </Grid>
+</Page>
